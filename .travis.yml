@@ -1,3 +1,11 @@
 language: java
 jdk:
  - oraclejdk8
+notifications:
+  email:
+    recipients:
+      - wsmith21@students.towson.edu
+      - rabell1@students.towson.edu
+      - kwymer1@students.towson.edu
+    on_success: always # default: change
+    on_failure: always # default: always
