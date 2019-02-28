@@ -3,6 +3,7 @@ package travis_ci_tutorial_java;
 import java.util.*;
 
 import static org.junit.Assert.*;
+
 import org.junit.*;
 
 public class SimpleCalculatorTest {
@@ -34,5 +35,18 @@ public class SimpleCalculatorTest {
 	public void testMinus() {
 		SimpleCalculator calc = new SimpleCalculator();
 		assertEquals(calc.minus(5, 3), 2);
+	}
+
+	@Test
+	public void testMinusWithNegNum() {
+		SimpleCalculator calc = new SimpleCalculator();
+		assertEquals(calc.minus(-4, 2), -6);
+	}
+
+	@Test
+	public void testMinusIntegerOverflow() {
+		SimpleCalculator calc = new SimpleCalculator();
+		int temp = calc.minus(-2147483648, 2147483647);
+		assertTrue(temp < 0);
 	}
 }
