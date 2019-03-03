@@ -43,10 +43,10 @@ public class SimpleCalculatorTest {
 		assertEquals(calc.minus(-4, 2), -6);
 	}
 
-	//@Test
-	//public void testMinusIntegerOverflow() {
-	//	SimpleCalculator calc = new SimpleCalculator();
-	//	int temp = calc.minus(-2147483648, 2147483647);
-	//	assertTrue(temp < 0);
-	//}
+	@Test
+	public void testMinusIntegerOverflow() {
+		SimpleCalculator calc = new SimpleCalculator();
+		int temp = calc.minus(-2147483648, 2147483647);
+		assertTrue(temp < 0);
+	}
 }
